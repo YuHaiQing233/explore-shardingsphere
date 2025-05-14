@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9096cdaa-4174-4e51-a775-4e03666f4f30" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="D:\Soft\Maven\apache-maven-3.9.4\conf" />
+        <option name="localRepository" value="D:\repository" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+        <option name="userSettingsFile" value="D:\Soft\Maven\apache-maven-3.9.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="DEPENDENCY_CHECKER_PROBLEMS_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2x1pkEGDJSqrbJn0WxxQerKfvDi" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.DictTest.createDictDate.executor": "Debug",
+    "JUnit.DictTest.createDictType.executor": "Debug",
+    "JUnit.DictTest.queryDictData.executor": "Debug",
+    "JUnit.DictTest.queryDictType.executor": "Debug",
+    "JUnit.OrderTest.createOrder.executor": "Debug",
+    "JUnit.OrderTest.queryOrder.executor": "Debug",
+    "JUnit.UserTest.createUser.executor": "Debug",
+    "JUnit.UserTest.queryUser.executor": "Debug",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ShardingApplication.executor": "Debug",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "E:/YuHaiQing/explore-sharding-table/explore-sharding-table/src/main/java/com/explore/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="JUnit.DictTest.queryDictData">
+    <configuration name="DictTest.createDictDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="explore-sharding-table" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.explore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.explore" />
+      <option name="MAIN_CLASS_NAME" value="com.explore.DictTest" />
+      <option name="METHOD_NAME" value="createDictDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DictTest.createDictType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="explore-sharding-table" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.explore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.explore" />
+      <option name="MAIN_CLASS_NAME" value="com.explore.DictTest" />
+      <option name="METHOD_NAME" value="createDictType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DictTest.queryDictData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="explore-sharding-table" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.explore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.explore" />
+      <option name="MAIN_CLASS_NAME" value="com.explore.DictTest" />
+      <option name="METHOD_NAME" value="queryDictData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DictTest.queryDictType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="explore-sharding-table" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.explore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.explore" />
+      <option name="MAIN_CLASS_NAME" value="com.explore.DictTest" />
+      <option name="METHOD_NAME" value="queryDictType" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.queryUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="explore-sharding-table" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.explore.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.explore" />
+      <option name="MAIN_CLASS_NAME" value="com.explore.UserTest" />
+      <option name="METHOD_NAME" value="queryUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DictTest.queryDictData" />
+        <item itemvalue="JUnit.DictTest.queryDictType" />
+        <item itemvalue="JUnit.DictTest.createDictDate" />
+        <item itemvalue="JUnit.DictTest.createDictType" />
+        <item itemvalue="JUnit.UserTest.queryUser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9096cdaa-4174-4e51-a775-4e03666f4f30" name="Changes" comment="" />
+      <created>1747115574747</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1747115574747</updated>
+      <workItem from="1747115575703" duration="25806000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -1,0 +1,65 @@
+server:
+  port: 10001
+
+spring:
+  shardingsphere:
+    props:
+      sql-show: true # 显示路由日志
+    datasource:
+      names: ds0, ds1
+      ds0:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/xh-db-0?useSSL=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: root
+        # Druid 连接池优化参数
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+      ds1:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/xh-db-1?useSSL=false&serverTimezone=Asia/Shanghai
+        username: root
+        password: root
+        # Druid 连接池优化参数
+        initialSize: 5
+        minIdle: 5
+        maxActive: 20
+    rules:
+      sharding:
+        # 非分片表默认路由到 ds0
+        default-data-source-name: ds0
+        # 定义广播表
+        key-generators:
+          snowflake:
+            type: SNOWFLAKE
+            props:
+              worker-id: 110
+        tables:
+          orders: # 分片表名
+            key-generate-strategy:
+              column: order_id
+              key-generator-name: snowflake
+            actual-data-nodes: ds${0..1}.orders_${0..3} # 物理节点分布
+            database-strategy:
+              standard:
+                sharding-column: user_id   # 分库键
+                sharding-algorithm-name: db_hash  # 分库算法
+            table-strategy:
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: table_hash
+        sharding-algorithms:
+          db_hash:
+            type: HASH_MOD  # 哈西取模算法
+            props:
+              sharding-count: 2   # 分2个库
+          table_hash:
+            type: HASH_MOD
+            props:
+              sharding-count: 4   # 每个库分4张表
+        broadcast-tables:
+          - dict_type
+          - dict_data
