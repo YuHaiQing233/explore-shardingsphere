@@ -3,6 +3,8 @@ package com.explore;
 import com.alibaba.druid.support.json.JSONUtils;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.explore.entity.Order;
+import com.explore.entity.OrderItem;
+import com.explore.mapper.OrderItemMapper;
 import com.explore.mapper.OrderMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
@@ -26,6 +28,8 @@ public class OrderTest {
 
     @Resource
     private OrderMapper orderMapper;
+    @Resource
+    private OrderItemMapper orderItemMapper;
 
 
     @Test
@@ -60,6 +64,28 @@ public class OrderTest {
             orderMapper.insert(order);
         }
 
+    }
+
+    @Test
+    public void createOrderItem() {
+        List<Order> orders = orderMapper.selectList(null);
+        orders.forEach(order -> {
+            OrderItem orderItem = new OrderItem();
+            orderItem.setOrderId(order.getOrderId());
+            orderItem.setUserId(order.getUserId());
+            orderItem.setOrderSn(order.getOrderNo().replace("OM", "OMD"));
+            orderItem.setProductId(1L);
+            orderItem.setProductName("维生素D");
+            orderItem.setProductImage("http://xh.com/productImage.jpg");
+            orderItem.setProductSpec("10mg");
+            orderItem.setProductPrice(BigDecimal.valueOf(30));
+            orderItem.setQuantity(1);
+            orderItem.setTotalPrice(BigDecimal.valueOf(30));
+            orderItem.setRefundStatus(0);
+            orderItem.setRefundAmount(BigDecimal.valueOf(0));
+            orderItem.setCreatedAt(LocalDateTime.now());
+            orderItemMapper.insert(orderItem);
+        });
     }
 
     @Test

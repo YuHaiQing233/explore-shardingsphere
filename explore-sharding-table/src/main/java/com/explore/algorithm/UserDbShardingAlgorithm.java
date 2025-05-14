@@ -15,6 +15,7 @@ import java.util.Properties;
  * @since 2025/5/13 16:58
  */
 public class UserDbShardingAlgorithm implements StandardShardingAlgorithm<Long> {
+
     @Override
     public String doSharding(Collection<String> collection, PreciseShardingValue<Long> preciseShardingValue) {
         return "";
@@ -34,4 +35,5 @@ public class UserDbShardingAlgorithm implements StandardShardingAlgorithm<Long> 
     public void init(Properties properties) {
 
     }
+
 }

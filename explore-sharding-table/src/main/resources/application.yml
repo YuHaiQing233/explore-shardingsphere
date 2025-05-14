@@ -51,6 +51,19 @@ spring:
               standard:
                 sharding-column: order_id
                 sharding-algorithm-name: table_hash
+          order_item:
+            key-generate-strategy:
+              column: item_id
+              key-generator-name: snowflake
+            actual-data-nodes: ds${0..1}.order_item_${0..3}
+            database-strategy:
+              standard:
+                sharding-column: user_id   # 分库键
+                sharding-algorithm-name: db_hash  # 分库算法
+            table-strategy:
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: table_hash
         sharding-algorithms:
           db_hash:
             type: HASH_MOD  # 哈西取模算法
@@ -63,3 +76,5 @@ spring:
         broadcast-tables:
           - dict_type
           - dict_data
+        binding-tables:
+          - orders, order_item  # 主表orders与子表order_item绑定

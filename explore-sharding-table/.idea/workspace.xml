@@ -48,6 +48,7 @@
     "JUnit.DictTest.queryDictData.executor": "Debug",
     "JUnit.DictTest.queryDictType.executor": "Debug",
     "JUnit.OrderTest.createOrder.executor": "Debug",
+    "JUnit.OrderTest.createOrderItem.executor": "Debug",
     "JUnit.OrderTest.queryOrder.executor": "Debug",
     "JUnit.UserTest.createUser.executor": "Debug",
     "JUnit.UserTest.queryUser.executor": "Debug",
@@ -71,7 +72,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.DictTest.queryDictData">
+  <component name="RunManager" selected="JUnit.OrderTest.createOrderItem">
     <configuration name="DictTest.createDictDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="explore-sharding-table" />
       <extension name="coverage">
@@ -136,7 +137,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.queryUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="OrderTest.createOrderItem" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="explore-sharding-table" />
       <extension name="coverage">
         <pattern>
@@ -145,8 +146,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="com.explore" />
-      <option name="MAIN_CLASS_NAME" value="com.explore.UserTest" />
-      <option name="METHOD_NAME" value="queryUser" />
+      <option name="MAIN_CLASS_NAME" value="com.explore.OrderTest" />
+      <option name="METHOD_NAME" value="createOrderItem" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -154,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OrderTest.createOrderItem" />
         <item itemvalue="JUnit.DictTest.queryDictData" />
         <item itemvalue="JUnit.DictTest.queryDictType" />
         <item itemvalue="JUnit.DictTest.createDictDate" />
         <item itemvalue="JUnit.DictTest.createDictType" />
-        <item itemvalue="JUnit.UserTest.queryUser" />
       </list>
     </recent_temporary>
   </component>
@@ -177,7 +178,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1747115574747</updated>
-      <workItem from="1747115575703" duration="25806000" />
+      <workItem from="1747115575703" duration="30739000" />
     </task>
     <servers />
   </component>

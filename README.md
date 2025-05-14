@@ -102,6 +102,31 @@ spring:
           - dict_data
 ```
 
+6、绑定表配置
+-----------
+```yaml
+spring:
+  shardingsphere:
+    rules:
+      sharding:
+        tables:
+          order_item:
+            key-generate-strategy:
+              column: item_id
+              key-generator-name: snowflake
+            actual-data-nodes: ds${0..1}.order_item_${0..3}
+            database-strategy:
+              standard:
+                sharding-column: user_id   # 分库键
+                sharding-algorithm-name: db_hash  # 分库算法
+            table-strategy:
+              standard:
+                sharding-column: order_id
+                sharding-algorithm-name: table_hash
+        binding-tables:
+          - orders, order_item  # 主表orders与子表order_item绑定
+```
+
 
 ```mysql
 
@@ -137,6 +162,28 @@ CREATE TABLE `orders` (
     KEY `idx_order_no` (`order_no`),
     KEY `idx_create_time` (`create_time`)
 ) COMMENT='订单主表';
+
+-- 订单字表
+CREATE TABLE `order_item` (
+    `item_id` bigint unsigned NOT NULL AUTO_INCREMENT COMMENT '订单商品ID',
+    `order_id` bigint NOT NULL COMMENT '订单ID',
+    `user_id` bigint unsigned NOT NULL COMMENT '用户ID',
+    `order_sn` varchar(32) NOT NULL COMMENT '订单编号',
+    `product_id` bigint unsigned NOT NULL COMMENT '商品ID',
+    `product_name` varchar(100) NOT NULL COMMENT '商品名称',
+    `product_image` varchar(255) DEFAULT NULL COMMENT '商品图片',
+    `product_spec` varchar(100) DEFAULT NULL COMMENT '商品规格',
+    `product_price` decimal(10,2) NOT NULL COMMENT '商品单价',
+    `quantity` int NOT NULL COMMENT '购买数量',
+    `total_price` decimal(10,2) NOT NULL COMMENT '商品总价',
+    `refund_status` tinyint DEFAULT '0' COMMENT '退款状态(0:无退款,1:退款中,2:已退款)',
+    `refund_amount` decimal(10,2) DEFAULT '0.00' COMMENT '退款金额',
+    `created_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `updated_at` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`item_id`),
+    KEY `idx_order_id` (`order_id`),
+    KEY `idx_product_id` (`product_id`)
+) COMMENT='订单商品明细表';
 
 -- 用户表
 CREATE TABLE `users` (
